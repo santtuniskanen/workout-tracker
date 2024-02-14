@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/santtuniskanen/workout-tracker/backend/database"
-	"github.com/santtuniskanen/workout-tracker/backend/router"
+	"github.com/santtuniskanen/workout-tracker/backend/models"
 )
 
 func init() {
@@ -11,5 +11,5 @@ func init() {
 }
 
 func main() {
-	router.Run()
+	database.DB.AutoMigrate(&models.User{})
 }
