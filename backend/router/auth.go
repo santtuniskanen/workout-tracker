@@ -5,8 +5,8 @@ import (
 	"github.com/santtuniskanen/workout-tracker/backend/controllers"
 )
 
-func UsersRoutes(rg *gin.RouterGroup) {
-	users := rg.Group("/users")
+func AuthRoutes(rg *gin.RouterGroup) {
 
-	users.GET("/", controllers.GetUsers)
+	auth := rg.Group("/auth")
+	auth.POST("/register", controllers.RegisterUser)
 }

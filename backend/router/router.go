@@ -12,6 +12,6 @@ func Run() {
 func Routes() {
 	api := r.Group("/api")
 	{
-		UsersRoutes(api)
+		AuthRoutes(api)
 	}
 }
