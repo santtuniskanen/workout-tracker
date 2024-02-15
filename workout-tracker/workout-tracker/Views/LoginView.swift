@@ -10,9 +10,10 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isLoading = false
     
     var body: some View {
-         
+        
         ZStack {
             Color.red
                 .ignoresSafeArea()
@@ -31,9 +32,7 @@ struct LoginView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                Button(action: {
-                    
-                }) {
+                Button(action: login) {
                     Text("Login")
                         .foregroundColor(.white)
                         .padding()
@@ -42,9 +41,26 @@ struct LoginView: View {
                         .cornerRadius(10)
                 }
                 .padding()
+                .disabled(isLoading)
             }
             .padding()
             .multilineTextAlignment(.center)
+        }
+    }
+    func login() {
+        isLoading = true
+        AuthService().login(email: email, password: password) {
+            result in
+            switch result {
+            case .success:
+                // Login successful, navigate to home screen
+                // You can implement navigation logic here
+                print("Login successful")
+            case .failure(let error):
+                // Handle registration error
+                print("Error: \(error)")
+            }
+            isLoading = false
         }
     }
 }

@@ -16,6 +16,7 @@
 		3AAC64642B7D243E004526EA /* workout_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC64632B7D243E004526EA /* workout_trackerUITestsLaunchTests.swift */; };
 		3AAC64752B7D28B5004526EA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC64742B7D28B5004526EA /* RegisterView.swift */; };
 		3AAC64772B7D359F004526EA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC64762B7D359F004526EA /* LoginView.swift */; };
+		3AEFF2022B7D4D2C003CDAAD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFF2012B7D4D2C003CDAAD /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3AAC64632B7D243E004526EA /* workout_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workout_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3AAC64742B7D28B5004526EA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3AAC64762B7D359F004526EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3AEFF2012B7D4D2C003CDAAD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		3AAC64452B7D243E004526EA /* workout-tracker */ = {
 			isa = PBXGroup;
 			children = (
+				3AEFF2002B7D4CF2003CDAAD /* Networking */,
 				3AAC64732B7D2892004526EA /* Views */,
 				3AAC64462B7D243E004526EA /* workout_trackerApp.swift */,
 				3AAC64482B7D243E004526EA /* ContentView.swift */,
@@ -139,6 +142,14 @@
 				3AAC64762B7D359F004526EA /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3AEFF2002B7D4CF2003CDAAD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3AEFF2012B7D4D2C003CDAAD /* AuthService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			files = (
 				3AAC64752B7D28B5004526EA /* RegisterView.swift in Sources */,
 				3AAC64492B7D243E004526EA /* ContentView.swift in Sources */,
+				3AEFF2022B7D4D2C003CDAAD /* AuthService.swift in Sources */,
 				3AAC64772B7D359F004526EA /* LoginView.swift in Sources */,
 				3AAC64472B7D243E004526EA /* workout_trackerApp.swift in Sources */,
 			);
